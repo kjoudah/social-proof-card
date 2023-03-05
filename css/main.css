@@ -1,0 +1,243 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+body {
+  font-family: "League Spartan";
+  font-size: 15px;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social__proof__card {
+  background: url("../images/bg-pattern-top-mobile.svg") top left no-repeat, url("../images/bg-pattern-bottom-mobile.svg") bottom no-repeat;
+  margin: 2rem;
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  max-width: 1440px;
+  gap: 4rem;
+}
+@media screen and (min-width: 62.5em) {
+  .social__proof__card {
+    padding: 5.75rem 9.125rem;
+    background: url("../images/bg-pattern-top-desktop.svg") top left no-repeat, url("../images/bg-pattern-bottom-desktop.svg") bottom right no-repeat;
+  }
+}
+
+.social_proof__card__top__section {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+@media screen and (min-width: 62.5em) {
+  .social_proof__card__top__section {
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+}
+
+.social_proof__card__top__section__header {
+  text-align: center;
+}
+.social_proof__card__top__section__header h1 {
+  padding: 1.5rem 0;
+  color: hsl(300, 43%, 22%);
+  font-size: 2.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  max-width: 12ch;
+  margin: 0 auto;
+}
+.social_proof__card__top__section__header p {
+  color: hsl(300, 43%, 22%);
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+@media screen and (min-width: 62.5em) {
+  .social_proof__card__top__section__header {
+    text-align: left;
+    padding-right: 3rem;
+    flex: 1;
+  }
+  .social_proof__card__top__section__header h1 {
+    margin: 0;
+    font-size: 4rem;
+    line-height: 2.5rem;
+  }
+  .social_proof__card__top__section__header p {
+    font-size: 1.5rem;
+  }
+}
+
+.social_proof__card__top__section__rating__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+@media screen and (min-width: 62.5em) {
+  .social_proof__card__top__section__rating__container {
+    flex: 1;
+  }
+}
+
+.rating__card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  background-color: hsl(300, 24%, 96%);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  min-width: 25rem;
+  margin: 0 auto;
+}
+.rating__card ul {
+  display: flex;
+  gap: 0.5rem;
+}
+.rating__card ul li i {
+  display: block;
+  width: 17px;
+  height: 16px;
+  background-image: url("../images/icon-star.svg");
+}
+.rating__card h2 {
+  color: hsl(300, 43%, 22%);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 62.5em) {
+  .rating__card {
+    flex-direction: row;
+    justify-content: space-around;
+    width: auto;
+  }
+  .rating__card:nth-child(2) {
+    transform: translateX(3rem);
+  }
+  .rating__card:nth-child(3) {
+    transform: translateX(6rem);
+  }
+}
+
+.social_proof__card__bottom__section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+@media screen and (min-width: 62.5em) {
+  .social_proof__card__bottom__section {
+    flex-direction: row;
+  }
+}
+
+.customer__review__card {
+  background-color: hsl(300, 43%, 22%);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  width: min(25rem, 100%);
+  flex-direction: column;
+  gap: 2rem;
+}
+.customer__review__card p {
+  color: hsl(0, 0%, 100%);
+}
+@media screen and (min-width: 62.5em) {
+  .customer__review__card:nth-child(2) {
+    transform: translateY(2rem);
+  }
+  .customer__review__card:nth-child(3) {
+    transform: translateY(4rem);
+  }
+  .customer__review__card p {
+    font-size: 1rem;
+  }
+}
+
+.customer__identity__container {
+  display: flex;
+  gap: 2rem;
+}
+.customer__identity__container img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.customer__info__container h3 {
+  color: white;
+}
+.customer__info__container h4 {
+  color: hsl(333, 80%, 67%);
+}

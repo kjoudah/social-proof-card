@@ -1,0 +1,206 @@
+@import 'reset.scss';
+@import 'colors.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+
+body {
+    font-family: 'League Spartan';
+    font-size: 15px;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social__proof__card {
+    background: url('../images/bg-pattern-top-mobile.svg') top left no-repeat, url('../images/bg-pattern-bottom-mobile.svg') bottom no-repeat;
+    margin: 2rem;
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    max-width: 1440px;
+    gap: 4rem;
+    @media screen and (min-width: 62.5em) {
+        padding: 5.75rem 9.125rem;
+        background: url('../images/bg-pattern-top-desktop.svg') top left no-repeat, url('../images/bg-pattern-bottom-desktop.svg') bottom right no-repeat;
+    }
+
+}
+
+.social_proof__card__top__section {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    @media screen and (min-width: 62.5em) {
+        flex-direction: row;
+        align-items: start;
+        justify-content: space-between;
+        gap: 4rem;
+    }
+}
+
+.social_proof__card__top__section__header {
+    text-align: center;
+
+    h1 {
+        padding: 1.5rem 0;
+        color: $PrimaryMagenta;
+        font-size: 2.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+        max-width: 12ch;
+        margin: 0 auto;
+    }
+
+    p {
+        color: $PrimaryMagenta;
+        font-size: 1.1rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+    }
+
+    @media screen and (min-width: 62.5em) {
+        text-align: left;
+        padding-right: 3rem;
+        flex: 1;
+        h1 {
+            margin: 0;
+            font-size: 4rem;
+            line-height: 2.5rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.social_proof__card__top__section__rating__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+
+    @media screen and (min-width: 62.5em) { 
+        flex: 1;
+    }
+}
+
+
+.rating__card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    background-color: $AccentLightMagenta;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    min-width: 25rem;
+    margin: 0 auto;
+
+    ul {
+        display: flex;
+        gap: 0.5rem;
+
+        li i {
+            display: block;
+            width: 17px;
+            height: 16px;
+            background-image: url('../images/icon-star.svg');
+        }
+    }
+
+    h2 {
+        color: $PrimaryMagenta;
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+
+    @media screen and (min-width: 62.5em) {
+        flex-direction: row;
+        justify-content: space-around;
+        width: auto;
+
+        &:nth-child(2) {
+            transform: translateX(3rem);
+        }
+
+        &:nth-child(3) {
+            transform: translateX(6rem);
+
+        }
+    }
+}
+
+.social_proof__card__bottom__section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+
+    @media screen and (min-width: 62.5em) {
+        flex-direction: row;
+    }
+
+}
+
+
+.customer__review__card {
+    background-color: $PrimaryMagenta;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    width:min(25rem, 100%);
+    flex-direction: column;
+    gap: 2rem;
+
+    p {
+        color: $AccentWhite
+    }
+    
+
+    @media screen and (min-width: 62.5em) {
+        &:nth-child(2) {
+            transform: translateY(2rem);
+        }
+
+        &:nth-child(3) {
+            transform: translateY(4rem);
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+}
+
+.customer__identity__container {
+    display: flex;
+    gap: 2rem;
+
+    img {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+    }
+
+}
+
+.customer__info__container {
+    h3 {
+        color: white;
+    }
+
+    h4 {
+        color: $PrimaryPink;
+    }
+}
+
